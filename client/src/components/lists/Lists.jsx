@@ -7,7 +7,7 @@ import { useState } from "react";
 
 const Lists = (index) => {
   const [isHovered, setIsHovered] = useState(false);
-  const trailer = 'https://www.youtube.com/shorts/ZxTpm_0Bh-8'
+  const trailer = 'https://www.youtube.com/watch?v=_nsV65jUPL8'
   return (
  
     <div
@@ -26,12 +26,12 @@ const Lists = (index) => {
       <video src={trailer} autoPlay ={true} loop></video>
 
       <div className="itemInfo">
-        <div className="icons">
+        <d iv className="icons">
           <PlayArrowIcon  className="icon"/>
           <AddIcon  className="icon"/>
           <ThumbUpAltOutlinedIcon className="icon" />
           <ThumbDownOutlinedIcon className="icon" />
-        </div>
+        </d>
 
         <div className="itemInfoTop">
           <span>1 hour 14 mins</span>

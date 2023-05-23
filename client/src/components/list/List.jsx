@@ -6,21 +6,22 @@ import ArrowBackIosOutlinedIcon from '@material-ui/icons/ArrowBackIosOutlined';
 import ArrowForwardIosOutlinedIcon from '@material-ui/icons/ArrowForwardIosOutlined';
 
 const List = () => {
-  const [isMoved, setIsMove] = useState(false);
+  const [isMoved, setIsMoved] = useState(false);
   const [slideNumber, setSlideNumber] = useState(0);
 
 
    const listRef = useRef();
 
   const handleClick = (direction) =>{
-    setIsMove(true)
+
+    setIsMoved(true)
     let distance = listRef.current.getBoundingClientRect().x -50 
     if(direction === 'left' && slideNumber > 0 ){
       setSlideNumber(slideNumber-1)
       listRef.current.style.transform = `translateX(${225 + distance}px)`       
     }
 
-    if(direction === 'right' && slideNumber < 5){
+    if(direction === 'right' && slideNumber < 4){
       setSlideNumber(slideNumber+1)
       listRef.current.style.transform = `translateX(${-225 + distance}px)`       
     }
